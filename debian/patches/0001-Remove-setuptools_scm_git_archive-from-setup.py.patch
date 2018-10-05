@@ -1,0 +1,24 @@
+From: Neil Williams <neil.williams@linaro.org>
+Date: Fri, 5 Oct 2018 10:07:32 +0100
+Subject: Remove setuptools_scm_git_archive from setup.py
+
+This may be a bug in setuptools_scm_git_archive but
+setuptools is unable to locate it even though a subsequent
+import works.
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 742d225..1c95b9d 100644
+--- a/setup.py
++++ b/setup.py
+@@ -47,7 +47,7 @@ setup(
+         'local_scheme': 'dirty-tag',
+         'write_to': 'pyocd/_version.py'
+     },
+-    setup_requires=['setuptools_scm!=1.5.3,!=1.5.4', 'setuptools_scm_git_archive'],
++    setup_requires=['setuptools_scm!=1.5.3,!=1.5.4'],
+     description="CMSIS-DAP debugger for Python",
+     long_description=open('README.rst', 'r').read(),
+     author="Chris Reed, Martin Kojtal, Russ Butler",
