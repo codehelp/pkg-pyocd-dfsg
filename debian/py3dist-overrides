@@ -1,2 +1,1 @@
-enum34 python3-enum34; PEP386
-intelhex python3-intelhex
+intelhex python3-intelhex; PEP386
