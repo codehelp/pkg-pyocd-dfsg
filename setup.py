@@ -42,10 +42,10 @@ elif sys.platform.startswith('darwin'):
     ])
 
 setup(
-    name="pyOCD",
+    name="pyocd",
     use_scm_version={
         'local_scheme': 'dirty-tag',
-        'write_to': 'pyOCD/_version.py'
+        'write_to': 'pyocd/_version.py'
     },
     setup_requires=['setuptools_scm!=1.5.3,!=1.5.4', 'setuptools_scm_git_archive'],
     description="CMSIS-DAP debugger for Python",
@@ -69,9 +69,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'pyocd-gdbserver = pyOCD.tools.gdb_server:main',
-            'pyocd-flashtool = pyOCD.tools.flash_tool:main',
-            'pyocd-tool = pyOCD.tools.pyocd:main',
+            'pyocd-gdbserver = pyocd.tools.gdb_server:main',
+            'pyocd-flashtool = pyocd.tools.flash_tool:main',
+            'pyocd-tool = pyocd.tools.pyocd:main',
         ],
     },
     packages=find_packages(),
