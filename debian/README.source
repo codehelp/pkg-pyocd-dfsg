@@ -1,0 +1,42 @@
+pyocd for Debian
+----------------
+
+The released source tarball is not suitable for Debian upload - it contains
+pre-compiled ARM binaries as well as firmware binaries for microcontrollers.
+However, these are not used by the python bindings, only for usage with gdb
+or the test suite.
+
+Repacking the original tarball
+------------------------------
+
+The original tarball needs to be repacked to make the directory
+name all lowercase.
+
+For a released tarball, remove the binaries/ and elf_files/ directories
+and remove ./src/gdb_test_program/gdb_test.elf then rename the module
+directory from ./pyOCD/ to ./pyocd/ and repack with the +dfsg suffix.
+
+In the pyOCD git directory, run:
+
+$ rm dist/*
+$ rm -rf binaries/
+$ rm -rf elf_files/
+$ rm src/gdb_test_program/gdb_test.elf
+$ python setup.py sdist
+
+Now convert the tarball by running the script in the packaging support
+in the pyOCD git directory (where the tarball exists in ./dist/).
+e.g.
+
+$ ../../../debian/convert.py
+Extracting to: /tmp/tmpbo0oe1zw
+Looking in /home/neil/code/debian/pyocd/pyOCD/dist
+Renaming /tmp/tmpbo0oe1zw/pyOCD-0.8.1a2.dev66 to /tmp/tmpbo0oe1zw/pyocd-0.8.1a2.dev66
+
+pyocd-0.8.1a2.dev66.tar.gz will now exist in the ./dist/ directory
+of the pyOCD git tree.
+
+Rename to pyocd_<version>+dfsg.orig.tar.gz
+
+ -- Neil Williams <codehelp@debian.org>  Fri, 28 Jul 2017 09:49:31 +0100
+

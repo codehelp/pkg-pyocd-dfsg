@@ -1,0 +1,7 @@
+pyocd for Debian
+---------------
+
+Repackaged to remove ./binaries/ and ./elf_files/ which have no source
+code in the upstream. Also renamed the module to lowercase.
+
+ -- Neil Williams <codehelp@debian.org>  Fri, 05 Oct 2018 09:50:54 +0100
