@@ -1,5 +1,6 @@
 pyocd (0.12.0+dfsg-1) unstable; urgency=medium
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release. (Closes: #910566: ITP: pyocd -- ARM Cortex-M
+    programming tools (Python3))
 
  -- Neil Williams <codehelp@debian.org>  Fri, 05 Oct 2018 09:50:54 +0100

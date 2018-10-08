@@ -1,6 +1,0 @@
-pyocd source: source-is-missing elf_files/lpc11u24_l1_gcc_arm.elf
-pyocd source: source-is-missing elf_files/lpc1768_l1_gcc_arm.elf
-pyocd source: source-is-missing src/gdb_test_program/gdb_test.elf
-pyocd source: source-only-upload-to-non-free-without-autobuild
-
-
