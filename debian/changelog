@@ -1,3 +1,10 @@
+pyocd (0.12.0+dfsg-3) unstable; urgency=medium
+
+   * Add a temporary symlink until the next upstream release with
+     the module renamed. (Closes: #911840)
+
+ -- Neil Williams <codehelp@debian.org>  Thu, 25 Oct 2018 15:55:16 +0100
+
 pyocd (0.12.0+dfsg-2) unstable; urgency=medium
 
   * Use pybuild
