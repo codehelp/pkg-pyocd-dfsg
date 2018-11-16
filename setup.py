@@ -19,17 +19,17 @@ from setuptools import setup, find_packages
 
 setup(
     name="pyocd",
-    use_scm_version={
-        'local_scheme': 'dirty-tag',
-        'write_to': 'pyocd/_version.py'
-    },
+#    use_scm_version={
+#        'local_scheme': 'dirty-tag',
+#        'write_to': 'pyocd/_version.py'
+#    },
     setup_requires=[
         'setuptools_scm!=1.5.3,!=1.5.4',
-        'setuptools_scm_git_archive',
+#        'setuptools_scm_git_archive',
         ],
     description="Cortex-M debugger for Python",
-    long_description=open('README.md', 'r').read(),
-    long_description_content_type='text/markdown',
+#    long_description=open('README.md', 'rb').read(),
+#    long_description_content_type='text/markdown',
     author="Chris Reed, Martin Kojtal, Russ Butler",
     author_email="chris.reed@arm.com, martin.kojtal@arm.com, russ.butler@arm.com",
     url='https://github.com/mbedmicro/pyOCD',
