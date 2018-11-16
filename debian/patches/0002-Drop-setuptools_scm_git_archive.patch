@@ -1,0 +1,24 @@
+From: Neil Williams <neil.williams@linaro.org>
+Date: Fri, 16 Nov 2018 10:20:15 +0000
+Subject: Drop setuptools_scm_git_archive
+
+Despite the new package containing an egg_info, the
+clean operation in our setup.py still fails.
+
+Signed-off-by: Neil Williams <neil.williams@linaro.org>
+---
+ setup.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 833374a..abdac25 100644
+--- a/setup.py
++++ b/setup.py
+@@ -25,7 +25,6 @@ setup(
+     },
+     setup_requires=[
+         'setuptools_scm!=1.5.3,!=1.5.4',
+-        'setuptools_scm_git_archive',
+         ],
+     description="Cortex-M debugger for Python",
+     long_description=open('README.md', 'rb').read(),
