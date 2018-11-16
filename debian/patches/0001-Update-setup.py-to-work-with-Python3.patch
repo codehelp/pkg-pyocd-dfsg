@@ -2,21 +2,40 @@ From: Neil Williams <neil.williams@linaro.org>
 Date: Fri, 16 Nov 2018 10:11:00 +0000
 Subject: Update setup.py to work with Python3
 
+Avoid usage of setuptools_scm_git_archive
+Drop the long description.
+
 Signed-off-by: Neil Williams <neil.williams@linaro.org>
 ---
- setup.py | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ setup.py | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index 14e4192..833374a 100644
+index 14e4192..688a7d6 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -28,7 +28,7 @@ setup(
-         'setuptools_scm_git_archive',
+@@ -19,17 +19,17 @@ from setuptools import setup, find_packages
+ 
+ setup(
+     name="pyocd",
+-    use_scm_version={
+-        'local_scheme': 'dirty-tag',
+-        'write_to': 'pyocd/_version.py'
+-    },
++#    use_scm_version={
++#        'local_scheme': 'dirty-tag',
++#        'write_to': 'pyocd/_version.py'
++#    },
+     setup_requires=[
+         'setuptools_scm!=1.5.3,!=1.5.4',
+-        'setuptools_scm_git_archive',
++#        'setuptools_scm_git_archive',
          ],
      description="Cortex-M debugger for Python",
 -    long_description=open('README.md', 'r').read(),
-+    long_description=open('README.md', 'rb').read(),
-     long_description_content_type='text/markdown',
+-    long_description_content_type='text/markdown',
++#    long_description=open('README.md', 'rb').read(),
++#    long_description_content_type='text/markdown',
      author="Chris Reed, Martin Kojtal, Russ Butler",
      author_email="chris.reed@arm.com, martin.kojtal@arm.com, russ.butler@arm.com",
+     url='https://github.com/mbedmicro/pyOCD',
