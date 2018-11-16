@@ -24,7 +24,7 @@ $ rm -rf elf_files/
 $ rm src/gdb_test_program/gdb_test.elf
 $ python setup.py sdist
 
-The ./dfsh.sh script exists in the Debian packaging repo for this
+The ./debian/dfsh.sh script exists in the Debian packaging repo for this
 task.
 
 Rename to pyocd_<version>+dfsg.orig.tar.gz
