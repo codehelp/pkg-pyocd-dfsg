@@ -1,0 +1,24 @@
+Source: pyocd
+Section: embedded
+Priority: optional
+Maintainer: Neil Williams <codehelp@debian.org>
+Build-Depends: debhelper (>= 11), dh-python,
+ python3, python3-setuptools-scm, python3-setuptools,
+ python3-setuptools-scm-git-archive, python3-usb,
+ python3-docutils
+Standards-Version: 4.2.1
+Homepage: https://github.com/mbedmicro/pyOCD
+Vcs-Git: https://github.com/codehelp/pkg-pyocd-dfsg
+Vcs-Browser: https://github.com/codehelp/pkg-pyocd-dfsg
+
+Package: python3-pyocd
+Architecture: all
+Depends: python3-pkg-resources, python3-usb (>= 1.0.0~),
+ ${python3:Depends}, ${misc:Depends}
+Description: ARM Cortex-M programming tools (Python3)
+ pyOCD is an Open Source Python based library for programming
+ and debugging ARM Cortex-M microcontrollers using CMSIS-DAP.
+ .
+ Includes support for flashing new binaries, resetting the device,
+ halt, step, resume read/write memory and set/remove breakpoints.
+
