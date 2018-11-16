@@ -1,0 +1,22 @@
+From: Neil Williams <neil.williams@linaro.org>
+Date: Fri, 16 Nov 2018 10:11:00 +0000
+Subject: Update setup.py to work with Python3
+
+Signed-off-by: Neil Williams <neil.williams@linaro.org>
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 14e4192..833374a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -28,7 +28,7 @@ setup(
+         'setuptools_scm_git_archive',
+         ],
+     description="Cortex-M debugger for Python",
+-    long_description=open('README.md', 'r').read(),
++    long_description=open('README.md', 'rb').read(),
+     long_description_content_type='text/markdown',
+     author="Chris Reed, Martin Kojtal, Russ Butler",
+     author_email="chris.reed@arm.com, martin.kojtal@arm.com, russ.butler@arm.com",
